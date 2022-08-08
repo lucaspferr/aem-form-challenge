@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/formapp",
+        "create path (nt:unstructured) /content/dam/formapp/jcr:content",
+        "set properties on /content/dam/formapp/jcr:content\n  set cq:conf{String} to /conf/formapp\n  set jcr:title{String} to \"Form App\"\nend"
+    ]
+}
