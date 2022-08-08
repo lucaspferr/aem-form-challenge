@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 17
+Implementation-Title: Form App - All
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: container
+Content-Package-Id: com.formapp:formapp.all:1.0.0-SNAPSHOT
+Content-Package-Description: All content package for Form App
+Content-Package-Roots: /apps/formapp-packages,/apps/formapp-vendor-packa
+ ges
+

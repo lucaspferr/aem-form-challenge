@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Form App - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="created">2022-08-08T13:34:29.023Z</entry>
+<entry key="groupId">com.formapp</entry>
+<entry key="name">formapp.all</entry>
+<entry key="description">All content package for Form App</entry>
+<entry key="artifactId">formapp.all</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="packageType">container</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.formapp</entry>
+</properties>
