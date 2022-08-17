@@ -1,0 +1,279 @@
+{
+  "project-settings": {
+    "code-owner": "Form App",
+    "bundle-path": "../core/src/main/java",
+    "test-path": "../core/src/test/java",
+    "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+    "component-path": "formapp",
+    "model-interface-pkg": "com.formapp.core.models",
+    "model-impl-pkg": "com.formapp.core.models.impl"
+  },
+  "name": "form-component",
+  "title": "Form Component",
+  "group": "Form App - Content",
+  "type": "components",
+  "options": {
+    "js": false,
+    "jstxt": false,
+    "css": false,
+    "csstxt": false,
+    "html": false,
+    "html-content": false,
+    "slingmodel": true,
+    "testclass": false,
+    "junit-major-version": 5,
+    "content-exporter": true,
+    "model-adaptables": ["request"],
+    "generic-javadoc": false,
+    "properties-tabs": [
+      {
+        "id": "general-tab",
+        "label": "General tab",
+        "fields": [
+          "mainTitle",
+          "firstTabName",
+          "secondTabName",
+          "thirdTabName",
+          "nextButtonText",
+          "finishButtonText",
+          "returnButtonText"
+        ]
+      },
+      {
+        "id": "first-tab",
+        "label": "Basic tab",
+        "fields": [
+          "fullNameLabel",
+          "nickNameLabel",
+          "emailLabel",
+          "phoneLabel",
+          "termsLabel",
+          "birthdayLabel",
+          "dayLabel",
+          "monthLabel",
+          "yearLabel",
+          "ageLabel"
+        ]
+      },
+      {
+        "id": "second-tab",
+        "label": "Social tab",
+        "fields": ["linkedinLabel", "githubLabel"]
+      },
+      {
+        "id": "third-tab",
+        "label": "Certificates tab",
+        "fields": [
+          "certificatesLabel",
+          "certificatesButtonLabel",
+          "moreButtonText",
+          "teamNameLabel",
+          "institutionLabel",
+          "graduationLabel"
+        ]
+      }
+    ],
+    "properties": [
+      {
+        "field": "mainTitle",
+        "description": "Adds a title to the form",
+        "label": "Changes the form title",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "mainTitle"
+      },
+      {
+        "field": "firstTabName",
+        "description": "Type the desired text for the first tab",
+        "label": "Changes the first tab name",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "firstTabName"
+      },
+      {
+        "field": "secondTabName",
+        "description": "Type the desired text for the second tab",
+        "label": "Changes the second tab name",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "secondTabName"
+      },
+      {
+        "field": "thirdTabName",
+        "description": "Type the desired text for the third tab",
+        "label": "Changes the third tab name",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "thirdTabName"
+      },
+      {
+        "field": "nextButtonText",
+        "description": "Type the desired text for the button",
+        "label": "Changes the next button text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "nextButtonText"
+      },
+      {
+        "field": "finishButtonText",
+        "description": "Type the desired text for the button",
+        "label": "Changes the finish button text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "finishButtonText"
+      },
+      {
+        "field": "returnButtonText",
+        "description": "Type the desired text for the button",
+        "label": "Changes the return button text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "returnButtonText"
+      },
+      {
+        "field": "fullNameLabel",
+        "description": "Type the desired text for the first input (first form)",
+        "label": "Full name label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "fullNameLabel"
+      },
+      {
+        "field": "nickNameLabel",
+        "description": "Type the desired text for the second input (first form)",
+        "label": "Nick name label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "nickNameLabel"
+      },
+      {
+        "field": "emailLabel",
+        "description": "Type the desired text for the third input (first form)",
+        "label": "Email label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "emailLabel"
+      },
+      {
+        "field": "phoneLabel",
+        "description": "Type the desired text for the fourth input (first form)",
+        "label": "Phone label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "phoneLabel"
+      },
+      {
+        "field": "termsLabel",
+        "description": "Type the desired text for the checkbox label",
+        "label": "Terms and privacy label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "termsLabel"
+      },
+      {
+        "field": "birthdayLabel",
+        "description": "Type the desired text for the Birthday label",
+        "label": "Birthday label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "birthdayLabel"
+      },
+      {
+        "field": "dayLabel",
+        "description": "Type the desired text for the Day label",
+        "label": "Day label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "dayLabel"
+      },
+      {
+        "field": "monthLabel",
+        "description": "Type the desired text for the Month label",
+        "label": "Month label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "monthLabel"
+      },
+      {
+        "field": "yearLabel",
+        "description": "Type the desired text for the Year label",
+        "label": "Year label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "yearLabel"
+      },
+      {
+        "field": "ageLabel",
+        "description": "Type the desired text for the Age label",
+        "label": "Age label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "ageLabel"
+      },
+      {
+        "field": "linkedinLabel",
+        "description": "Type the desired text for the first input (second form)",
+        "label": "Linkedin link label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "linkedinLabel"
+      },
+      {
+        "field": "githubLabel",
+        "description": "Type the desired text for the second input (second form)",
+        "label": "Github link label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "githubLabel"
+      },
+      {
+        "field": "certificatesLabel",
+        "description": "Type the desired text for the first input (third form)",
+        "label": "Certificates link label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "certificatesLabel"
+      },
+      {
+        "field": "certificatesButtonLabel",
+        "description": "Type the desired text for the certificates button (third form)",
+        "label": "Certificates button label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "certificatesButtonLabel"
+      },
+      {
+        "field": "moreButtonText",
+        "description": "Type the desired text for the button (third form)",
+        "label": "Changes the more button text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "moreButtonText"
+      },
+      {
+        "field": "teamNameLabel",
+        "description": "Type the desired text for the second input (third form)",
+        "label": "Team name link label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "teamNameLabel"
+      },
+      {
+        "field": "institutionLabel",
+        "description": "Type the desired text for the third input (third form)",
+        "label": "Institution label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "institutionLabel"
+      },
+      {
+        "field": "graduationLabel",
+        "description": "Type the desired text for the fourth input (third form)",
+        "label": "Graduation label text",
+        "type": "textfield",
+        "json-expose": true,
+        "json-property": "graduationLabel"
+      }
+    ]
+  }
+}

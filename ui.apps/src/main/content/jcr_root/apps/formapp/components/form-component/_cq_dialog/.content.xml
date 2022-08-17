@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  ***********************************************************************
+ |  Form App CONFIDENTIAL
+ |  ___________________
+ |
+ |  Copyright 2022 Form App
+ |  All Rights Reserved.
+ |
+ |  NOTICE:  All information contained herein is, and remains the property
+ |  of Form App and its suppliers, if any. The intellectual and
+ |  technical concepts contained herein are proprietary to Form App
+ |  and its suppliers and are protected by trade secret or copyright law.
+ |  Dissemination of this information or reproduction of this material
+ |  is strictly forbidden unless prior written permission is obtained
+ |  from Form App.
+ |  ***********************************************************************
+-->
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Form Component"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+   <content jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+      <items jcr:primaryType="nt:unstructured">
+         <tabs jcr:primaryType="nt:unstructured"
+               sling:resourceType="granite/ui/components/coral/foundation/tabs">
+            <items jcr:primaryType="nt:unstructured">
+               <general-tab jcr:primaryType="nt:unstructured"
+                            jcr:title="General tab"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <mainTitle cq-msm-lockable="./mainTitle"
+                                      fieldDescription="Adds a title to the form"
+                                      fieldLabel="Changes the form title"
+                                      jcr:primaryType="nt:unstructured"
+                                      name="./mainTitle"
+                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <firstTabName cq-msm-lockable="./firstTabName"
+                                         fieldDescription="Type the desired text for the first tab"
+                                         fieldLabel="Changes the first tab name"
+                                         jcr:primaryType="nt:unstructured"
+                                         name="./firstTabName"
+                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <secondTabName cq-msm-lockable="./secondTabName"
+                                          fieldDescription="Type the desired text for the second tab"
+                                          fieldLabel="Changes the second tab name"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./secondTabName"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <thirdTabName cq-msm-lockable="./thirdTabName"
+                                         fieldDescription="Type the desired text for the third tab"
+                                         fieldLabel="Changes the third tab name"
+                                         jcr:primaryType="nt:unstructured"
+                                         name="./thirdTabName"
+                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <nextButtonText cq-msm-lockable="./nextButtonText"
+                                           fieldDescription="Type the desired text for the button"
+                                           fieldLabel="Changes the next button text"
+                                           jcr:primaryType="nt:unstructured"
+                                           name="./nextButtonText"
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <finishButtonText cq-msm-lockable="./finishButtonText"
+                                             fieldDescription="Type the desired text for the button"
+                                             fieldLabel="Changes the finish button text"
+                                             jcr:primaryType="nt:unstructured"
+                                             name="./finishButtonText"
+                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <returnButtonText cq-msm-lockable="./returnButtonText"
+                                             fieldDescription="Type the desired text for the button"
+                                             fieldLabel="Changes the return button text"
+                                             jcr:primaryType="nt:unstructured"
+                                             name="./returnButtonText"
+                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
+                     </column>
+                  </items>
+               </general-tab>
+               <first-tab jcr:primaryType="nt:unstructured"
+                          jcr:title="Basic tab"
+                          sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <fullNameLabel cq-msm-lockable="./fullNameLabel"
+                                          fieldDescription="Type the desired text for the first input (first form)"
+                                          fieldLabel="Full name label text"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./fullNameLabel"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <nickNameLabel cq-msm-lockable="./nickNameLabel"
+                                          fieldDescription="Type the desired text for the second input (first form)"
+                                          fieldLabel="Nick name label text"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./nickNameLabel"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <emailLabel cq-msm-lockable="./emailLabel"
+                                       fieldDescription="Type the desired text for the third input (first form)"
+                                       fieldLabel="Email label text"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./emailLabel"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <phoneLabel cq-msm-lockable="./phoneLabel"
+                                       fieldDescription="Type the desired text for the fourth input (first form)"
+                                       fieldLabel="Phone label text"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./phoneLabel"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <termsLabel cq-msm-lockable="./termsLabel"
+                                       fieldDescription="Type the desired text for the checkbox label"
+                                       fieldLabel="Terms and privacy label text"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./termsLabel"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
+                     </column>
+                  </items>
+               </first-tab>
+               <second-tab jcr:primaryType="nt:unstructured"
+                           jcr:title="Social tab"
+                           sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <linkedinLabel cq-msm-lockable="./linkedinLabel"
+                                          fieldDescription="Type the desired text for the first input (second form)"
+                                          fieldLabel="Linkedin link label text"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./linkedinLabel"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <githubLabel cq-msm-lockable="./githubLabel"
+                                        fieldDescription="Type the desired text for the second input (second form)"
+                                        fieldLabel="Github link label text"
+                                        jcr:primaryType="nt:unstructured"
+                                        name="./githubLabel"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
+                     </column>
+                  </items>
+               </second-tab>
+               <third-tab jcr:primaryType="nt:unstructured"
+                          jcr:title="Certificates tab"
+                          sling:resourceType="granite/ui/components/coral/foundation/container">
+                  <layout jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                  <items jcr:primaryType="nt:unstructured">
+                     <column jcr:primaryType="nt:unstructured"
+                             sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                           <certificatesLabel cq-msm-lockable="./certificatesLabel"
+                                              fieldDescription="Type the desired text for the first input (third form)"
+                                              fieldLabel="Certificates link label text"
+                                              jcr:primaryType="nt:unstructured"
+                                              name="./certificatesLabel"
+                                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <moreButtonText cq-msm-lockable="./moreButtonText"
+                                           fieldDescription="Type the desired text for the button (third form)"
+                                           fieldLabel="Changes the more button text"
+                                           jcr:primaryType="nt:unstructured"
+                                           name="./moreButtonText"
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <teamNameLabel cq-msm-lockable="./teamNameLabel"
+                                          fieldDescription="Type the desired text for the second input (third form)"
+                                          fieldLabel="Team name link label text"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./teamNameLabel"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <institutionLabel cq-msm-lockable="./institutionLabel"
+                                             fieldDescription="Type the desired text for the third input (third form)"
+                                             fieldLabel="Institution label text"
+                                             jcr:primaryType="nt:unstructured"
+                                             name="./institutionLabel"
+                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <graduationLabel cq-msm-lockable="./graduationLabel"
+                                            fieldDescription="Type the desired text for the fourth input (third form)"
+                                            fieldLabel="Graduation label text"
+                                            jcr:primaryType="nt:unstructured"
+                                            name="./graduationLabel"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
+                     </column>
+                  </items>
+               </third-tab>
+            </items>
+         </tabs>
+      </items>
+   </content>
+</jcr:root>
