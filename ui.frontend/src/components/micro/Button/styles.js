@@ -23,7 +23,7 @@ export const ButtonWrapper = styled.div`
 
 export const ButtonText = styled.span`
   font-family: "Nunito", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;
   margin-left: 2px;
 `;

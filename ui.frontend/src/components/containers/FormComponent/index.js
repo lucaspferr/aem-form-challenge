@@ -1,7 +1,11 @@
 import React from "react";
-import { BodyContainer, ContentContainer } from "./styles";
+import { BodyContainer, ContentContainer, Title } from "./styles";
 import { MapTo } from "@adobe/aem-react-editable-components";
 import NavBar from "../../micro/NavBar";
+import Basic from "../Basic";
+import Social from "../Social";
+import Certificates from "../Certificates";
+import Results from "../Results";
 
 const FormComponent = (props) => {
   //Variables for changing names [AEM]
@@ -55,16 +59,111 @@ const FormComponent = (props) => {
     returnButtonText: props.returnButtonText,
   };
 
+  //Hook responsible for the step logic
+  const [currentStep, setCurrentStep] = React.useState(0);
+
+  //Hooks containing the basic, social and certificates info
+  const [basicInfo, setBasicInfo] = React.useState({
+    fName: "",
+    nName: "",
+    email: "",
+    phone: "",
+    birthday: "",
+    age: "",
+  });
+  const [socialInfo, setSocialInfo] = React.useState({
+    linkedin: "",
+    github: "",
+  });
+  const [certificatesInfo, setCertificatesInfo] = React.useState({
+    certificates: [],
+    teamName: "",
+    institution: "",
+    graduation: "",
+  });
+
+  //Variable responsible for storing form data
+  const userData = {
+    basic: basicInfo,
+    social: socialInfo,
+    certificates: certificatesInfo,
+  };
+  //Variable and function responsible for attribuating the component to the current step
+  let currentStepContent;
+  switch (currentStep) {
+    case 0:
+      currentStepContent = (
+        <React.Fragment>
+          <Title>Team SignUp</Title>
+          <NavBar
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            userData={userData}
+            navNames={navNames}
+          />
+          <Basic
+            basicInfo={basicInfo}
+            setBasicInfo={setBasicInfo}
+            setCurrentStep={setCurrentStep}
+            basicTabNames={basicTabNames}
+          />
+        </React.Fragment>
+      );
+      break;
+    case 1:
+      currentStepContent = (
+        <React.Fragment>
+          <Title>Team SignUp</Title>
+          <NavBar
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            userData={userData}
+            navNames={navNames}
+          />
+          <Social
+            socialInfo={socialInfo}
+            setSocialInfo={setSocialInfo}
+            setCurrentStep={setCurrentStep}
+          />
+        </React.Fragment>
+      );
+      break;
+    case 2:
+      currentStepContent = (
+        <React.Fragment>
+          <Title>Team SignUp</Title>
+          <NavBar
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+            userData={userData}
+            navNames={navNames}
+          />
+          <Certificates
+            certificatesInfo={certificatesInfo}
+            setCertificatesInfo={setCertificatesInfo}
+            setCurrentStep={setCurrentStep}
+          />
+        </React.Fragment>
+      );
+      break;
+    case 3:
+      currentStepContent = (
+        <Results
+          basicInfo={basicInfo}
+          socialInfo={socialInfo}
+          certificatesInfo={certificatesInfo}
+        />
+      );
+      break;
+    default:
+      currentStepContent = (
+        <Basic basicInfo={basicInfo} setBasicInfo={setBasicInfo} />
+      );
+      break;
+  }
   return (
     <BodyContainer>
-      <ContentContainer>
-        <NavBar
-          // firstTabName={props.firstTabName}
-          // secondTabName={props.secondTabName}
-          // thirdTabName={props.thirdTabName}
-          navNames={navNames}
-        />
-      </ContentContainer>
+      <ContentContainer>{currentStepContent}</ContentContainer>
     </BodyContainer>
   );
 };
@@ -77,24 +176,24 @@ FormComponent.defaultProps = {
   nextButtonText: "Next",
   finishButtonText: "Finish",
   returnButtonText: "Return",
-  fullNameLabel: "Full Name *",
+  fullNameLabel: "Full Name",
   nickNameLabel: "Nickname",
-  emailLabel: "Email *",
+  emailLabel: "Email",
   phoneLabel: "Phone",
   termsLabel: "I accept the terms and privacy",
-  birthdayLabel: "Birthday *",
+  birthdayLabel: "Birthday",
   dayLabel: "Day",
   monthLabel: "Month",
   yearLabel: "Year",
   ageLabel: "Age",
   linkedinLabel: "Linkedin",
-  githubLabel: "Github *",
+  githubLabel: "Github",
   certificatesLabel: "Certificates",
   certificatesButtonLabel: "Certificates",
   moreButtonText: "More",
-  teamNameLabel: "Team Name *",
-  institutionLabel: "Institution *",
-  graduationLabel: "Graduation *",
+  teamNameLabel: "Team Name",
+  institutionLabel: "Institution",
+  graduationLabel: "Graduation",
 };
 
 export default MapTo("formapp/components/form-component")(FormComponent);
