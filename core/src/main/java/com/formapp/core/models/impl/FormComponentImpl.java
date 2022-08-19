@@ -66,11 +66,23 @@ public class FormComponentImpl
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String termsLabel;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String birthdayLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String dayLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String monthLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String yearLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String ageLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String linkedinLabel;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String githubLabel;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String certificatesLabel;
+    @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+    private String certificatesButtonLabel;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
     private String moreButtonText;
     @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
@@ -155,6 +167,36 @@ public class FormComponentImpl
     }
 
     @Override
+    @JsonProperty("birthdayLabel")
+    public String getBirthdayLabel() {
+        return birthdayLabel;
+    }
+
+    @Override
+    @JsonProperty("dayLabel")
+    public String getDayLabel() {
+        return dayLabel;
+    }
+
+    @Override
+    @JsonProperty("monthLabel")
+    public String getMonthLabel() {
+        return monthLabel;
+    }
+
+    @Override
+    @JsonProperty("yearLabel")
+    public String getYearLabel() {
+        return yearLabel;
+    }
+
+    @Override
+    @JsonProperty("ageLabel")
+    public String getAgeLabel() {
+        return ageLabel;
+    }
+
+    @Override
     @JsonProperty("linkedinLabel")
     public String getLinkedinLabel() {
         return linkedinLabel;
@@ -170,6 +212,12 @@ public class FormComponentImpl
     @JsonProperty("certificatesLabel")
     public String getCertificatesLabel() {
         return certificatesLabel;
+    }
+
+    @Override
+    @JsonProperty("certificatesButtonLabel")
+    public String getCertificatesButtonLabel() {
+        return certificatesButtonLabel;
     }
 
     @Override

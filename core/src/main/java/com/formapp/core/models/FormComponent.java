@@ -69,6 +69,21 @@ public interface FormComponent
     @JsonProperty("termsLabel")
     String getTermsLabel();
 
+    @JsonProperty("birthdayLabel")
+    String getBirthdayLabel();
+
+    @JsonProperty("dayLabel")
+    String getDayLabel();
+
+    @JsonProperty("monthLabel")
+    String getMonthLabel();
+
+    @JsonProperty("yearLabel")
+    String getYearLabel();
+
+    @JsonProperty("ageLabel")
+    String getAgeLabel();
+
     @JsonProperty("linkedinLabel")
     String getLinkedinLabel();
 
@@ -77,6 +92,9 @@ public interface FormComponent
 
     @JsonProperty("certificatesLabel")
     String getCertificatesLabel();
+
+    @JsonProperty("certificatesButtonLabel")
+    String getCertificatesButtonLabel();
 
     @JsonProperty("moreButtonText")
     String getMoreButtonText();

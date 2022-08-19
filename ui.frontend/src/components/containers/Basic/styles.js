@@ -56,13 +56,29 @@ export const ButtonContainer = styled.div`
   }
 `;
 
-export const LowerParagraph = styled.p`
+export const LabelContainer = styled.div`
+  display: flex;
   width: 100%;
+  justify-content: start;
+  align-items: center;
+  height: 20px;
+`;
+
+export const LowerParagraph = styled.p`
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   color: #767676;
   margin: 0;
   padding: 0;
+`;
+
+export const LowerParagraphError = styled.p`
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  color: #ff0000;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
 `;
 
 export const TermsCheckbox = styled.input`
@@ -75,4 +91,11 @@ export const TermsParagraph = styled.p`
   font-family: "Nunito", sans-serif;
   font-size: 14px;
   color: #111111;
+`;
+
+export const TermsParagraphError = styled.p`
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  color: #ff0000;
+  padding-left: 10px;
 `;

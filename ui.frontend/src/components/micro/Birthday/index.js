@@ -31,7 +31,7 @@ const Birthday = (props) => {
   return (
     <React.Fragment>
       <SelectContainer>
-        <SelectLabel>Day</SelectLabel>
+        <SelectLabel>{props.birthdayNames.dayLabel}</SelectLabel>
         <SelectBox id="day" onChange={handleChange}>
           {[...Array(31)].map((_, i) => (
             <option key={"day" + i} value={i + 1}>
@@ -41,7 +41,7 @@ const Birthday = (props) => {
         </SelectBox>
       </SelectContainer>
       <SelectContainer>
-        <SelectLabel>Month</SelectLabel>
+        <SelectLabel>{props.birthdayNames.monthLabel}</SelectLabel>
         <SelectBox id="month" onChange={handleChange}>
           {[...Array(12)].map((_, i) => (
             <option key={"month" + i} value={i + 1}>
@@ -51,7 +51,7 @@ const Birthday = (props) => {
         </SelectBox>
       </SelectContainer>
       <SelectContainer>
-        <SelectLabel>Year</SelectLabel>
+        <SelectLabel>{props.birthdayNames.yearLabel}</SelectLabel>
         <SelectBox id="year" onChange={handleChange}>
           {[...Array(115)].map((_, i) => (
             <option key={"year" + (i + firstYear)} value={i + firstYear + 1}>
@@ -61,8 +61,8 @@ const Birthday = (props) => {
         </SelectBox>
       </SelectContainer>
       <SelectContainer>
-        <SelectLabel>Age</SelectLabel>
-        <AgeBox disabled value={age ? age : ""} />
+        <SelectLabel>{props.birthdayNames.ageLabel}</SelectLabel>
+        <AgeBox disabled value={age ? age : ""} id="age" />
       </SelectContainer>
     </React.Fragment>
   );

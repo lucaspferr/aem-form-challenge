@@ -124,6 +124,7 @@ const FormComponent = (props) => {
             socialInfo={socialInfo}
             setSocialInfo={setSocialInfo}
             setCurrentStep={setCurrentStep}
+            socialTabNames={socialTabNames}
           />
         </React.Fragment>
       );

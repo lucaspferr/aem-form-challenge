@@ -124,6 +124,36 @@
                                        jcr:primaryType="nt:unstructured"
                                        name="./termsLabel"
                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <birthdayLabel cq-msm-lockable="./birthdayLabel"
+                                          fieldDescription="Type the desired text for the Birthday label"
+                                          fieldLabel="Birthday label text"
+                                          jcr:primaryType="nt:unstructured"
+                                          name="./birthdayLabel"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <dayLabel cq-msm-lockable="./dayLabel"
+                                     fieldDescription="Type the desired text for the Day label"
+                                     fieldLabel="Day label text"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./dayLabel"
+                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <monthLabel cq-msm-lockable="./monthLabel"
+                                       fieldDescription="Type the desired text for the Month label"
+                                       fieldLabel="Month label text"
+                                       jcr:primaryType="nt:unstructured"
+                                       name="./monthLabel"
+                                       sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <yearLabel cq-msm-lockable="./yearLabel"
+                                      fieldDescription="Type the desired text for the Year label"
+                                      fieldLabel="Year label text"
+                                      jcr:primaryType="nt:unstructured"
+                                      name="./yearLabel"
+                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <ageLabel cq-msm-lockable="./ageLabel"
+                                     fieldDescription="Type the desired text for the Age label"
+                                     fieldLabel="Age label text"
+                                     jcr:primaryType="nt:unstructured"
+                                     name="./ageLabel"
+                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
                         </items>
                      </column>
                   </items>
@@ -168,6 +198,12 @@
                                               jcr:primaryType="nt:unstructured"
                                               name="./certificatesLabel"
                                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <certificatesButtonLabel cq-msm-lockable="./certificatesButtonLabel"
+                                                    fieldDescription="Type the desired text for the certificates button (third form)"
+                                                    fieldLabel="Certificates button label text"
+                                                    jcr:primaryType="nt:unstructured"
+                                                    name="./certificatesButtonLabel"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
                            <moreButtonText cq-msm-lockable="./moreButtonText"
                                            fieldDescription="Type the desired text for the button (third form)"
                                            fieldLabel="Changes the more button text"

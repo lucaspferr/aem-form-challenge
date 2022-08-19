@@ -6,8 +6,8 @@ export const Button = styled.button`
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  width: 65px;
-  height: 30px;
+  width: 80px;
+  height: 40px;
 `;
 
 export const ButtonIcon = styled.img`

@@ -19,9 +19,26 @@ export const InputBox = styled.input`
   }
 `;
 
+export const LabelContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: start;
+  align-items: center;
+  height: 20px;
+`;
+
+export const InputErrorMessage = styled.p`
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+  margin: 0;
+  color: #ff0000;
+  padding-bottom: 4px;
+  padding-left: 10px;
+`;
+
 export const InputLabel = styled.label`
   font-family: "Nunito", sans-serif;
   font-size: 12px;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
   color: #767676;
 `;
