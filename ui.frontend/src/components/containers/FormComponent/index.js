@@ -120,7 +120,7 @@ const FormComponent = (props) => {
     case 1:
       currentStepContent = (
         <React.Fragment>
-          <Title>Team SignUp</Title>
+          <Title>{props.mainTitle}</Title>
           <NavBar
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
@@ -139,7 +139,7 @@ const FormComponent = (props) => {
     case 2:
       currentStepContent = (
         <React.Fragment>
-          <Title>Team SignUp</Title>
+          <Title>{props.mainTitle}</Title>
           <NavBar
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
@@ -159,9 +159,14 @@ const FormComponent = (props) => {
       currentStepContent = (
         <Results
           basicInfo={basicInfo}
+          setBasicInfo={setBasicInfo}
           socialInfo={socialInfo}
+          setSocialInfo={setSocialInfo}
           certificatesInfo={certificatesInfo}
+          setCertificatesInfo={setCertificatesInfo}
           resultTabNames={resultTabNames}
+          setCurrentStep={setCurrentStep}
+          setBirthdate={setBirthdate}
         />
       );
       break;

@@ -5,10 +5,18 @@ export const BodyContainer = styled.div`
   background-color: white;
   flex-direction: column;
   width: 100%;
-  height: 90%;
+  height: 100%;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   color: #111111;
+`;
+
+export const FormContainer = styled.form`
+  display: flex;
+  width: 100%;
+  height: 90%;
+  margin: 0;
+  padding: 0;
 `;
 
 export const UpperContainer = styled.div`
