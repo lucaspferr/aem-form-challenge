@@ -78,7 +78,7 @@ const ButtonDropdown = (props) => {
       <DropdownContainer>
         <Input
           width={"100%"}
-          label={props.btnDrpNames.certificateLabel}
+          label={props.btnDrpNames.certificatesLabel}
           id={"certificate"}
           onChange={handleMore}
         />

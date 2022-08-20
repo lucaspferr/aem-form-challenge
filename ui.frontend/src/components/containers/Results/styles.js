@@ -18,6 +18,8 @@ export const UpperContainer = styled.div`
   height: 45%;
   align-content: space-around;
   P {
+    font-family: "Nunito", sans-serif;
+    color: #111111;
     margin: 0 0 10px 0;
     width: 100%;
   }

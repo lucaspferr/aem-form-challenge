@@ -2,7 +2,7 @@ import React from "react";
 import ButtonComponent from "../../micro/Button";
 import ButtonDropdown from "../../micro/ButtonDropdown";
 import Input from "../../micro/Input";
-import icon from "../../images/chevron-right.svg";
+import icon from "../../images/check.svg";
 import {
   UpperContainer,
   BodyContainer,
@@ -75,7 +75,7 @@ const Certificates = (props) => {
           <Input
             width={"100%"}
             label={props.certificatesTabNames.teamNameLabel + " *"}
-            errorMessage={error.fullNameError}
+            errorMessage={error.teamNameError}
             dValue={
               props.certificatesInfo.teamName
                 ? props.certificatesInfo.teamName
@@ -110,7 +110,12 @@ const Certificates = (props) => {
           <ButtonComponent
             icon={icon}
             type={"submit"}
-            width={"500px"}
+            bStyle={{
+              width: "100px",
+            }}
+            wStyle={{
+              flexDirection: "row-reverse",
+            }}
             bName={props.certificatesTabNames.finishButtonText}
           />
         </ButtonContainer>
