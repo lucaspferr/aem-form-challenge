@@ -1,4 +1,4 @@
-# File created on Fri Aug 19 17:37:50 BRT 2022 by the Apache Sling Content Package to Sling Feature converter
+# File created on Fri Aug 19 21:41:51 BRT 2022 by the Apache Sling Content Package to Sling Feature converter
 # content-package path, content-package ID, content-package type, content-package parent ID, path in parent content-package, absolute path
 C:\Users\lucas.ferreira\Documents\JS REACT\React\DesafiosAEM\Form\formapp\all\target\formapp.all-1.0.0-SNAPSHOT.zip,com.formapp:formapp.all:1.0.0-SNAPSHOT,CONTAINER,,,
 C:\Users\lucas.ferreira\Documents\JS REACT\React\DesafiosAEM\Form\formapp\all\target\formapp.all-1.0.0-SNAPSHOT.zip,com.formapp:formapp.ui.config:1.0.0-SNAPSHOT,CONTAINER,com.formapp:formapp.all:1.0.0-SNAPSHOT,/jcr_root/apps/formapp-packages/application/install/formapp.ui.config-1.0.0-SNAPSHOT.zip,C:\Users\lucas.ferreira\Documents\JS REACT\React\DesafiosAEM\Form\formapp\all\target\formapp.all-1.0.0-SNAPSHOT.zip!/jcr_root/apps/formapp-packages/application/install/formapp.ui.config-1.0.0-SNAPSHOT.zip

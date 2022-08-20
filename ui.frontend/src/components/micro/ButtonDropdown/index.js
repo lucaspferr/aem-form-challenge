@@ -78,13 +78,15 @@ const ButtonDropdown = (props) => {
       <DropdownContainer>
         <Input
           width={"100%"}
-          label={"Certificates"}
+          label={props.btnDrpNames.certificateLabel}
           id={"certificate"}
           onChange={handleMore}
         />
         <Container>
           <DropButton onClick={() => setIsOpen(!isOpen)} type={"button"}>
-            <DropBtnText>Certificates</DropBtnText>
+            <DropBtnText>
+              {props.btnDrpNames.certificatesButtonLabel}
+            </DropBtnText>
             <DropBtnIcon src={arrowDown} alt="arrow-down" />
           </DropButton>
           {isOpen && (
@@ -102,7 +104,7 @@ const ButtonDropdown = (props) => {
         </Container>
         <MoreButton type={"submit"}>
           <DropBtnIcon src={plus} alt="plus" style={{ height: "14px" }} />
-          <MoreBtnText>More</MoreBtnText>
+          <MoreBtnText>{props.btnDrpNames.moreButtonText}</MoreBtnText>
           <DropBtnIcon
             src={arrowRight}
             alt="arrow-right"

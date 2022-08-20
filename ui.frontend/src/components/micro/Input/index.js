@@ -27,7 +27,7 @@ const Input = (props) => {
         <InputLabel>{props.label}</InputLabel>
         <InputErrorMessage>{errorMsg}</InputErrorMessage>
       </LabelContainer>
-      <InputBox id={props.id} />
+      <InputBox id={props.id} defaultValue={props.dValue} />
     </InputContainer>
   );
 };

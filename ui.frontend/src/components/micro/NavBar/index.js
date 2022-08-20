@@ -45,7 +45,7 @@ const NavBar = (props) => {
         props.setCurrentStep(1);
       }
     } else if (event.target.id === "certificates-button") {
-      if (props.userData.certificates) {
+      if (props.userData.certificates.teamName) {
         props.setCurrentStep(2);
       }
     }

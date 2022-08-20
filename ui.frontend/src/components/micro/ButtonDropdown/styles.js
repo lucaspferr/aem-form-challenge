@@ -18,7 +18,7 @@ export const InvalidContainer = styled.div`
   height: 5vh;
   justify-content: flex-end;
   div {
-    width: 50%;
+    width: 100%;
     P {
       font-family: "Nunito", sans-serif;
       font-size: 9px;

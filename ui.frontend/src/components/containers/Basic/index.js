@@ -29,7 +29,7 @@ const Basic = (props) => {
 
   //Hook that will display the errors messages
   const errorsMessages = {
-    birthdayError: "Please enter your",
+    birthdayError: "Please enter your ",
     termsError: "You must accept the terms",
   };
   const [error, setError] = React.useState({
@@ -92,22 +92,26 @@ const Basic = (props) => {
             label={props.basicTabNames.fullNameLabel + " *"}
             id={"fName"}
             errorMessage={error.fullNameError}
+            dValue={props.basicInfo.fName ? props.basicInfo.fName : ""}
           ></Input>
           <Input
             width={"100%"}
             label={props.basicTabNames.nickNameLabel}
             id={"nName"}
+            dValue={props.basicInfo.nName ? props.basicInfo.nName : ""}
           ></Input>
           <Input
             width={"60%"}
             label={props.basicTabNames.emailLabel + " *"}
             id={"email"}
             errorMessage={error.emailError}
+            dValue={props.basicInfo.email ? props.basicInfo.email : ""}
           ></Input>
           <Input
             width={"30%"}
             label={props.basicTabNames.phoneLabel}
             id={"phone"}
+            dValue={props.basicInfo.phone ? props.basicInfo.phone : ""}
           ></Input>
         </UpperContainer>
         <LowerContainer>
@@ -122,8 +126,11 @@ const Basic = (props) => {
             </LowerParagraphError>
           </LabelContainer>
           <Birthday
+            basicInfo={props.basicInfo}
             setBasicInfo={props.setBasicInfo}
             birthdayNames={birthdayNames}
+            birthdate={props.birthdate}
+            setBirthdate={props.setBirthdate}
           />
         </LowerContainer>
         <TermsContainer>

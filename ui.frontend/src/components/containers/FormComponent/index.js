@@ -45,8 +45,8 @@ const FormComponent = (props) => {
     graduationLabel: props.graduationLabel,
     finishButtonText: props.finishButtonText,
   };
-  const returnTabNames = {
-    //Return tab names (fourth tab)
+  const resultTabNames = {
+    //Result tab names (fourth tab)
     fullNameLabel: props.fullNameLabel,
     emailLabel: props.emailLabel,
     birthdayLabel: props.birthdayLabel,
@@ -81,6 +81,11 @@ const FormComponent = (props) => {
     institution: "",
     graduation: "",
   });
+  const [birthdate, setBirthdate] = React.useState({
+    day: "",
+    month: "",
+    year: "",
+  });
 
   //Variable responsible for storing form data
   const userData = {
@@ -94,7 +99,7 @@ const FormComponent = (props) => {
     case 0:
       currentStepContent = (
         <React.Fragment>
-          <Title>Team SignUp</Title>
+          <Title>{props.mainTitle}</Title>
           <NavBar
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
@@ -104,6 +109,8 @@ const FormComponent = (props) => {
           <Basic
             basicInfo={basicInfo}
             setBasicInfo={setBasicInfo}
+            birthdate={birthdate}
+            setBirthdate={setBirthdate}
             setCurrentStep={setCurrentStep}
             basicTabNames={basicTabNames}
           />
@@ -143,6 +150,7 @@ const FormComponent = (props) => {
             certificatesInfo={certificatesInfo}
             setCertificatesInfo={setCertificatesInfo}
             setCurrentStep={setCurrentStep}
+            certificatesTabNames={certificatesTabNames}
           />
         </React.Fragment>
       );
@@ -153,6 +161,7 @@ const FormComponent = (props) => {
           basicInfo={basicInfo}
           socialInfo={socialInfo}
           certificatesInfo={certificatesInfo}
+          resultTabNames={resultTabNames}
         />
       );
       break;
@@ -171,6 +180,7 @@ const FormComponent = (props) => {
 
 //Default names
 FormComponent.defaultProps = {
+  mainTitle: "Team SignUp",
   firstTabName: "Basic",
   secondTabName: "Social",
   thirdTabName: "Certificates",
