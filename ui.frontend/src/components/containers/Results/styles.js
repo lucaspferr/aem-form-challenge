@@ -13,6 +13,7 @@ export const BodyContainer = styled.div`
 
 export const FormContainer = styled.form`
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 90%;
   margin: 0;
@@ -23,13 +24,15 @@ export const UpperContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 45%;
+  max-height: 70%;
+  min-height: 50%;
   align-content: space-around;
   P {
     font-family: "Nunito", sans-serif;
     color: #111111;
     margin: 0 0 10px 0;
     width: 100%;
+    line-height: 26px;
   }
 `;
 
@@ -64,11 +67,15 @@ export const List = styled.ul`
 export const LowerContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  align-content: space-around;
   width: 100%;
   height: 20%;
   P {
+    font-family: "Nunito", sans-serif;
+    color: #111111;
     margin: 0 0 10px 0;
     width: 100%;
+    line-height: 26px;
   }
 `;
 

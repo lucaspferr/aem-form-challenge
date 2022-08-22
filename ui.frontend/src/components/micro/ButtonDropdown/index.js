@@ -21,17 +21,27 @@ import Input from "../Input";
 const ButtonDropdown = (props) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [invalidInput, setInvalidInput] = React.useState("");
+  const displayNone = {
+    display: "none",
+  };
+  const displayFlex = {
+    display: "flex",
+  };
+  const [showButton, setShowButton] = React.useState(displayNone);
 
   //Function to remove item from list
   function handleDrop(event) {
     event.preventDefault();
-    console.log(event.target.id);
     let newList = props.certificatesList.filter(
       (item) => item !== props.certificatesList.at(event.target.id)
     );
     props.setCertificatesInfo({
       certificates: newList,
     });
+    if (newList.length === 0) {
+      setShowButton(displayNone);
+      setIsOpen(false);
+    }
   }
 
   //Function to add item to list
@@ -48,6 +58,7 @@ const ButtonDropdown = (props) => {
       props.setCertificatesInfo({
         certificates: [...props.certificatesList, certificateInput],
       });
+      setShowButton(displayFlex);
       setInvalidInput("");
     }
   }
@@ -83,7 +94,11 @@ const ButtonDropdown = (props) => {
           onChange={handleMore}
         />
         <Container>
-          <DropButton onClick={() => setIsOpen(!isOpen)} type={"button"}>
+          <DropButton
+            onClick={() => setIsOpen(!isOpen)}
+            type={"button"}
+            style={showButton}
+          >
             <DropBtnText>
               {props.btnDrpNames.certificatesButtonLabel}
             </DropBtnText>

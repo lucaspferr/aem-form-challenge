@@ -48,9 +48,12 @@ const FormComponent = (props) => {
   const resultTabNames = {
     //Result tab names (fourth tab)
     fullNameLabel: props.fullNameLabel,
+    nickNameLabel: props.nickNameLabel,
     emailLabel: props.emailLabel,
+    phoneLabel: props.phoneLabel,
     birthdayLabel: props.birthdayLabel,
     ageLabel: props.ageLabel,
+    linkedinLabel: props.linkedinLabel,
     githubLabel: props.githubLabel,
     certificatesLabel: props.certificatesLabel,
     teamNameLabel: props.teamNameLabel,

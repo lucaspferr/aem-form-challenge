@@ -20,6 +20,42 @@ const Results = (props) => {
     flexDirection: "row-reverse",
     justifyContent: "space-around",
   };
+  //Check if there is certificates data
+  const certificatesContainer =
+    props.certificatesInfo.certificates.length > 0 ? (
+      <MiddleContainer>
+        <TitleContainer>
+          {props.resultTabNames.certificatesLabel}:
+        </TitleContainer>
+        <List>
+          {props.certificatesInfo.certificates.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </List>
+      </MiddleContainer>
+    ) : null;
+  //Check if there is nickname data
+  const nickName = props.basicInfo.nName ? (
+    <React.Fragment>
+      {props.resultTabNames.nickNameLabel} :{props.basicInfo.nName}
+      <br />
+    </React.Fragment>
+  ) : null;
+  //Check if there is phone data
+  const phone = props.basicInfo.phone ? (
+    <React.Fragment>
+      {props.resultTabNames.phoneLabel} :{props.basicInfo.phone}
+      <br />
+    </React.Fragment>
+  ) : null;
+  //Check if there is linkedin data
+  const linkedin = props.socialInfo.linkedin ? (
+    <React.Fragment>
+      {props.resultTabNames.linkedinLabel} :{props.socialInfo.linkedin}
+      <br />
+    </React.Fragment>
+  ) : null;
+
   function handleSubmit(event) {
     event.preventDefault();
     //Clear the state of all the fields
@@ -46,7 +82,6 @@ const Results = (props) => {
       institution: "",
       graduation: "",
     });
-    alert("Form cleared");
     props.setCurrentStep(0);
   }
   return (
@@ -56,31 +91,20 @@ const Results = (props) => {
           <p>Your data has been sent successfully!</p>
           <p>
             {props.resultTabNames.fullNameLabel}: {props.basicInfo.fName}
-          </p>
-          <p>
+            <br />
+            {nickName}
             {props.resultTabNames.emailLabel}: {props.basicInfo.email}
-          </p>
-          <p>
-            {props.resultTabNames.birthdayLabel}: {props.basicInfo.birthday}
-          </p>
-          <p>
+            <br />
+            {phone}
+            {props.resultTabNames.birthdayLabel}: {props.birthday}
+            <br />
             {props.resultTabNames.ageLabel}: {props.basicInfo.age}
-          </p>
-          <p>
+            <br />
+            {linkedin}
             {props.resultTabNames.githubLabel}: {props.socialInfo.github}
           </p>
         </UpperContainer>
-        <MiddleContainer>
-          <TitleContainer>
-            {props.resultTabNames.certificatesLabel}:
-          </TitleContainer>
-
-          <List>
-            {props.certificatesInfo.certificates.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </List>
-        </MiddleContainer>
+        {certificatesContainer}
         <LowerContainer>
           <p>
             {props.resultTabNames.teamNameLabel}:{" "}
@@ -95,16 +119,16 @@ const Results = (props) => {
             {props.certificatesInfo.graduation}
           </p>
         </LowerContainer>
-        <ButtonContainer>
-          <ButtonComponent
-            icon={icon}
-            type={"submit"}
-            bStyle={buttonStyle}
-            wStyle={buttonWrapperStyle}
-            bName={props.resultTabNames.returnButtonText}
-          />
-        </ButtonContainer>
       </BodyContainer>
+      <ButtonContainer>
+        <ButtonComponent
+          icon={icon}
+          type={"submit"}
+          bStyle={buttonStyle}
+          wStyle={buttonWrapperStyle}
+          bName={props.resultTabNames.returnButtonText}
+        />
+      </ButtonContainer>
     </FormContainer>
   );
 };
